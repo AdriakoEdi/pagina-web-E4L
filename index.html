@@ -225,20 +225,54 @@
       header {
         align-items: flex-start;
         flex-direction: column;
-      }
+   }
 
       nav a {
         margin: 5px 14px 5px 0;
-      }
+   }
 
       .hero {
         padding-top: 56px;
         padding-bottom: 56px;
-      }
+  }
 
       section {
         padding-top: 40px;
         padding-bottom: 40px;
+
+      .marca {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+  }
+
+   .logo-img {
+        width: 68px;
+        height: 68px;
+        object-fit: contain;
+        border-radius: 12px;
+        background: white;
+        padding: 4px;
+    }
+
+  .card-img {
+        display: block;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        object-fit: cover;
+   }
+
+       @media (max-width: 600px) {
+         header {
+          align-items: flex-start;
+          flex-direction: column;
+  }
+
+  .logo-img {
+          width: 56px;
+          height: 56px; 
       }
     }
   </style>
@@ -246,13 +280,21 @@
 
 <body>
 
-  <header>
+<header>
+  <div class="marca">
+    <img
+      class="logo-img"
+      src="imagenes/logo-completenglish.png"
+      alt="Logotipo de COMPLETENGLISH"
+    >
     <div>
-      <h1 class="logo">COMPLETE <span>ENGLISH</span></h1>
+      <h1 class="logo">COMPLETENGLISH</h1>
       <p class="tagline">Inglés para toda la vida</p>
     </div>
-    <strong>¡El futuro también se aprende en inglés!</strong>
-  </header>
+  </div>
+
+  <strong>¡El futuro también se aprende en inglés!</strong>
+</header>
 
   <nav aria-label="Navegación principal">
     <a href="#inicio">Inicio</a>
@@ -289,7 +331,11 @@
 
       <div class="cards">
         <article class="card">
-          <div class="icon" aria-hidden="true">🎯</div>
+          <img
+            class="card-img"
+            src="imagenes/aprendizaje.jpg"
+            alt="Niño aprendiendo inglés"
+          >
           <h3>Aprendizaje con propósito</h3>
           <p>
             Practicamos inglés útil para situaciones cotidianas:
@@ -298,7 +344,11 @@
         </article>
 
         <article class="card">
-          <div class="icon" aria-hidden="true">🎲</div>
+          <img
+            class="card-img"
+            src="imagenes/clases-dinamicas.jpg"
+            alt="Niños participando en una actividad de inglés"
+          >
           <h3>Clases dinámicas</h3>
           <p>
             Juegos, canciones, retos y actividades que invitan a participar
@@ -307,7 +357,11 @@
         </article>
 
         <article class="card">
-          <div class="icon" aria-hidden="true">🌱</div>
+          <img
+            class="card-img"
+            src="imagenes/avance.jpg"
+            alt="Estudiante practicando inglés"
+          >
           <h3>Avance paso a paso</h3>
           <p>
             Reforzamos lo aprendido y animamos a cada estudiante a ganar
