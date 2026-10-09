@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="English 4 Life: clases de inglés para niños con actividades dinámicas, grupos pequeños y aprendizaje práctico."
+  >
+
+  <title>English 4 Life | Inglés para toda la vida</title>
+
+  <style>
+    :root {
+      --azul: #12366b;
+      --azul-oscuro: #09254c;
+      --turquesa: #20b8ad;
+      --amarillo: #ffd166;
+      --texto: #243047;
+      --fondo: #f5f8fc;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      line-height: 1.6;
+      background: var(--fondo);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 8%;
+      color: var(--blanco);
+      background: var(--azul);
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: var(--amarillo);
+    }
+
+    .tagline {
+      margin: 4px 0 0;
+      font-size: 14px;
+    }
+
+    nav {
+      padding: 13px 8%;
+      background: var(--azul-oscuro);
+    }
+
+    nav a {
+      display: inline-block;
+      margin-right: 22px;
+      color: var(--blanco);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--amarillo);
+    }
+
+    .hero {
+      padding: 76px 8%;
+      color: var(--blanco);
+      background:
+        radial-gradient(circle at 85% 20%, #ffffff24 0 9%, transparent 9.5%),
+        linear-gradient(120deg, var(--azul), #267ea3);
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #ffffff70;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .hero h2 {
+      max-width: 700px;
+      margin: 18px 0 12px;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 13px 22px;
+      border-radius: 7px;
+      color: var(--azul-oscuro);
+      background: var(--amarillo);
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #ffdf8f;
+    }
+
+    section {
+      padding: 52px 8%;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 8px;
+      color: var(--azul);
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid #e7edf5;
+      border-radius: 14px;
+      background: var(--blanco);
+      box-shadow: 0 5px 18px #172b4d0d;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    .icon {
+      font-size: 30px;
+    }
+
+    .benefits {
+      background: #eaf3fa;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .check {
+      flex: 0 0 auto;
+      color: #11877f;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .cta {
+      color: var(--blanco);
+      text-align: center;
+      background: linear-gradient(120deg, #137b83, #20b8ad);
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .cta .button {
+      margin-top: 6px;
+    }
+
+    .contact {
+      background: var(--blanco);
+    }
+
+    .contact-info a {
+      color: var(--azul);
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 22px 8%;
+      color: var(--blanco);
+      text-align: center;
+      background: var(--azul-oscuro);
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 14px 5px 0;
+      }
+
+      .hero {
+        padding-top: 56px;
+        padding-bottom: 56px;
+      }
+
+      section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1 class="logo">ENGLISH <span>4 LIFE</span></h1>
+      <p class="tagline">Inglés para toda la vida</p>
+    </div>
+    <strong>¡El futuro también se aprende en inglés!</strong>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#programas">Programas</a>
+    <a href="#beneficios">¿Por qué elegirnos?</a>
+    <a href="#contacto">Inscripciones</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="etiqueta">Clases de inglés para niños</span>
+        <h2>Más confianza, más oportunidades y mucho más inglés.</h2>
+        <p>
+          En English 4 Life, los niños aprenden inglés participando,
+          jugando y comunicándose. Queremos que cada estudiante avance
+          a su ritmo y se sienta orgulloso de lo que puede expresar.
+        </p>
+        <a class="button" href="#contacto">Solicita información de inscripción</a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="section-heading">
+        <h2>Aprender inglés puede ser una gran aventura</h2>
+        <p>
+          Creamos un ambiente cercano y motivador donde aprender no se
+          siente como una obligación. A través de actividades, conversación
+          y práctica, acompañamos a los niños para que desarrollen sus
+          habilidades paso a paso.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🎯</div>
+          <h3>Aprendizaje con propósito</h3>
+          <p>
+            Practicamos inglés útil para situaciones cotidianas:
+            presentarse, hacer preguntas y compartir ideas.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">🎲</div>
+          <h3>Clases dinámicas</h3>
+          <p>
+            Juegos, canciones, retos y actividades que invitan a participar
+            y mantener la curiosidad.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌱</div>
+          <h3>Avance paso a paso</h3>
+          <p>
+            Reforzamos lo aprendido y animamos a cada estudiante a ganar
+            confianza al usar el idioma.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="programas">
+      <div class="section-heading">
+        <h2>Programas para diferentes etapas</h2>
+        <p>
+          Cuéntanos la edad y experiencia de tu hijo o hija para orientarte
+          sobre el grupo más adecuado.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Pequeños exploradores</h3>
+          <p>
+            Primer acercamiento al inglés mediante vocabulario, canciones,
+            cuentos y juegos apropiados para su edad.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Jóvenes comunicadores</h3>
+          <p>
+            Práctica de expresiones, comprensión y conversación para
+            comunicarse con mayor seguridad.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Inglés para avanzar</h3>
+          <p>
+            Actividades para ampliar vocabulario, fortalecer la gramática
+            y usar el inglés en contextos cotidianos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="benefits" id="beneficios">
+      <div class="section-heading">
+        <h2>Una decisión que puede abrir muchas puertas</h2>
+        <p>
+          Aprender otro idioma desde pequeños puede ayudarles a comunicarse,
+          explorar nuevas culturas y prepararse para futuras oportunidades.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card benefit">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Un espacio para participar</h3>
+            <p>Motivamos a los estudiantes a preguntar, probar y expresarse.</p>
+          </div>
+        </article>
+
+        <article class="card benefit">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Aprendizaje activo</h3>
+            <p>Practicar y usar el idioma forma parte de cada experiencia.</p>
+          </div>
+        </article>
+
+        <article class="card benefit">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Comunicación con las familias</h3>
+            <p>
+              Queremos que madres y padres conozcan el proceso y puedan
+              acompañar el aprendizaje.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>El primer paso puede empezar hoy</h2>
+      <p>
+        Escríbenos para conocer horarios, edades, costos y disponibilidad
+        de grupos.
+      </p>
+      <!-- Reemplaza el número del enlace por el WhatsApp oficial de la escuela.
+           Usa el código de país, sin espacios, signos ni guiones. -->
+      <a
+        class="button"
+        href="https://wa.me/5210000000000?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20las%20clases%20de%20English%204%20Life."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Preguntar por WhatsApp
+      </a>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="section-heading">
+        <h2>Información e inscripciones</h2>
+        <p>
+          Nos encantará ayudarte a encontrar la opción adecuada para tu
+          familia. Contáctanos para recibir información actualizada.
+        </p>
+      </div>
+
+      <div class="contact-info">
+        <!-- Sustituye los datos de ejemplo por los datos oficiales. -->
+        <p><strong>WhatsApp:</strong> <a href="tel:+5210000000000">+52 1 000 000 0000</a></p>
+        <p><strong>Correo:</strong> <a href="mailto:info@english4life.com">info@english4life.com</a></p>
+        <p><strong>Ubicación:</strong> Agrega aquí la dirección de la escuela</p>
+        <p><strong>Horarios de atención:</strong> Agrega aquí los horarios oficiales</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>English 4 Life</strong> | Inglés para toda la vida</p>
+    <p>© 2026 English 4 Life. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
